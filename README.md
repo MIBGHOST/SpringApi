@@ -1,6 +1,7 @@
 SpringApi
 
 SpringApi is a backend application for an e-commerce website. It provides APIs for CRUD operations on products and includes functionality for fetching images from the database. The application follows the MVC (Model-View-Controller) design pattern.
+
 Table of Contents
 
     Getting Started
@@ -27,30 +28,28 @@ Before you begin, ensure you have the following installed on your machine:
 
 Installation
 
-    Clone the repository:
+    Clone the repository:git clone https://github.com/MIBGHOST/SpringApi.git
 
-    sh
-
-git clone https://github.com/MIBGHOST/SpringApi.git
-cd SpringApi
+    sh cd SpringApi
 
 Configure MongoDB:
-Update the application.properties file in src/main/resources with your MongoDB Atlas credentials or local MongoDB instance details.
+
+     Update the application.properties file in src/main/resources with your MongoDB Atlas credentials or local MongoDB instance details.
 
 properties
 
-spring.data.mongodb.uri=mongodb+srv://<username>:<password>@cluster0.mongodb.net/<dbname>?retryWrites=true&w=majority
+    spring.data.mongodb.uri=mongodb+srv://<username>:<password>@cluster0.mongodb.net/<dbname>?retryWrites=true&w=majority
 
 Build the project:
 
-sh
-
-mvn clean install
-
-Run the application:
-
-sh
-
+    sh
+    
+    mvn clean install
+    
+    Run the application:
+    
+    sh
+    
     mvn spring-boot:run
 
 Usage
@@ -61,61 +60,61 @@ APIs
 The application provides the following APIs:
 Product Management
 
-    Create a Product
+Create a Product
 
     http
 
-POST /api/products
+    POST /api/products
 
-Request Body:
-
-json
-
-{
-    "name": "string",
-    "description": "string",
-    "price": "number",
-    "image": "base64String"
-}
+    Request Body:
+    
+    json
+    
+    {
+        "name": "string",
+        "description": "string",
+        "price": "number",
+        "image": "base64String"
+    }
 
 Get All Products
 
-http
-
-GET /api/products
-
+    http
+    
+    GET /api/products
+    
 Get a Product by ID
 
-http
-
-GET /api/products/{id}
+    http
+    
+    GET /api/products/{id}
 
 Update a Product
 
-http
-
-PUT /api/products/{id}
-
-Request Body:
-
-json
-
-{
-    "name": "string",
-    "description": "string",
-    "price": "number",
-    "image": "base64String"
-}
+    http
+    
+    PUT /api/products/{id}
+    
+    Request Body:
+    
+    json
+    
+    {
+        "name": "string",
+        "description": "string",
+        "price": "number",
+        "image": "base64String"
+    }
 
 Delete a Product
 
-http
-
-DELETE /api/products/{id}
+    http
+    
+    DELETE /api/products/{id}
 
 Fetch Product Image
 
-http
+    http
 
     GET /api/products/{id}/image
 
@@ -129,23 +128,21 @@ The project follows the MVC design pattern and is structured as follows:
     Controller: Contains the REST controllers.
 
 Directory Layout
-
-css
-
-src/
-├── main/
-│   ├── java/
-│   │   └── com/
-│   │       └── springapi/
-│   │           ├── controller/
-│   │           ├── model/
-│   │           ├── repository/
-│   │           └── service/
-│   └── resources/
-│       └── application.properties
-└── test/
-    └── java/
-
+    
+    src/
+    ├── main/
+    │   ├── java/
+    │   │   └── com/
+    │   │       └── springapi/
+    │   │           ├── controller/
+    │   │           ├── model/
+    │   │           ├── repository/
+    │   │           └── service/
+    │   └── resources/
+    │       └── application.properties
+    └── test/
+        └── java/
+    
 Built With
 
     Spring Boot - The framework used for application setup and configuration.
