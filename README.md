@@ -29,8 +29,7 @@ Before you begin, ensure you have the following installed on your machine:
 Installation
 
     Clone the repository:git clone https://github.com/MIBGHOST/SpringApi.git
-
-    sh cd SpringApi
+    cd SpringApi
 
 Configure MongoDB:
 
@@ -42,14 +41,10 @@ properties
 
 Build the project:
 
-    sh
-    
     mvn clean install
     
-    Run the application:
-    
-    sh
-    
+Run the application:
+
     mvn spring-boot:run
 
 Usage
@@ -58,6 +53,7 @@ Once the application is running, you can access the various APIs using tools lik
 APIs
 
 The application provides the following APIs:
+
 Product Management
 
 Create a Product
